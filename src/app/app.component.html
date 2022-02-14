@@ -1,0 +1,19 @@
+<div>
+  <h3>Soal 1</h3>
+  <input type="text" [(ngModel)]="int1" OnlyNumber="true"/>
+  <button (click)="onClickSoal1()">Run</button><br>
+  <span style="white-space: pre-line">{{text1}}</span>
+</div>
+<div>
+  <h3>Soal 2</h3>
+  <span>Pikirkan sebuah angka dari 0-100 lalu klik </span>
+  <button (click)="onClickSoal2()">Run</button><br><br>
+  <div *ngIf="hasil == -1 && mulai">
+    <span>Apakah angka anda >= {{tengah}}?</span><br>
+    <button (click)="onClickYes()">YES</button>
+    <button (click)="onClickNo()">NO</button>
+  </div>
+  <span *ngIf="hasil > -1 && mulai">Angka anda {{hasil}}</span>
+</div>
+
+<router-outlet></router-outlet>
